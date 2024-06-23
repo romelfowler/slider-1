@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="panels">
+    <div class="panel">
+      <div class="background" style="background-image: url(https://romelfowler.com/wp-content/uploads/2024/06/banner-1.jpg)"></div>
+      <div class="text">
+        <div class="location"></div>
+        <div class="title">Website</div>
+        <div class="author">Wordpress / Shopify</div>
+        <a class="link" href="https://romelfowler.com/websites/" target="_blank" rel="noreferrer">LEARN MORE</a>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="background" style="background-image: url(https://romelfowler.com/wp-content/uploads/2019/11/owl.jpg)"></div>
+      <div class="text">
+        <div class="location"></div>
+        <div class="title">Graphic Design</div>
+        <div class="author">Photoshop</div>
+        <!-- <a class="link" href="https://romelfowler.com/graphic-design/" target="_blank" rel="noreferrer">LEARN MORE</a> -->
+      </div>
+    </div>
+    <div class="panel">
+      <div class="background" style="background-image: url(https://romelfowler.com/wp-content/uploads/2019/02/zepplin.jpg)"></div>
+      <div class="text">
+        <div class="location"></div>
+        <div class="title">Photography</div>
+        <div class="author">Nikon / Canon / DJI</div>
+        <!-- <a class="link" href="https://romelfowler.com/product-photography/" target="_blank" rel="noreferrer">LEARN MORE</a> -->
+      </div>
+    </div>
+    <div class="panel">
+        <div class="background" style="background-image: url(https://romelfowler.com/wp-content/uploads/2020/02/7-copy-scaled.jpg)"></div>
+        <div class="text">
+          <div class="location"></div>
+          <div class="title">Magazines</div>
+          <div class="author">Print</div>
+          <!-- <a class="link" href="https://unsplash.com/photos/KQ75n3P8EJA" target="_blank" rel="noreferrer">LEARN MORE</a> -->
+        </div>
+      </div>
+  </div>
+
+
+
+    <script>
+
+let panels = document.querySelectorAll('.panel');
+
+for(let i = 0; i < 4; i++) {
+	let base = 150;
+	let duration = 1000;
+	let delay = base + duration * i;
+	let panel = panels[i];
+	setTimeout(() => panel.classList.add('hover'), delay);
+	setTimeout(() => panel.classList.remove('hover'), delay + duration * 0.8);
+}
+
+if(location.href.includes('fullcpgrid')) {
+	document.body.style.fontSize = '11px';
+}
+    </script>
+</body>
+</html>
